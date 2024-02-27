@@ -1,0 +1,18 @@
+version: '3'
+services:
+  tracer_humble:
+    network_mode: host
+    volumes:
+      - '/dev:/dev'
+      - '/tmp/.X11-unix:/tmp/.X11-unix'
+    privileged: true 
+    environment:
+      - "XAUTHORITY=$AUTH"
+      - "LIBGL_ALWAYS_SOFTWARE=1"
+      - "DISPLAY=$DISPLAY"
+    device_cgroup_rules:
+      - "a *:* rmw"
+    tty: true
+    build: .
+    image: tracer_humble
+    container_name: tracer_humble

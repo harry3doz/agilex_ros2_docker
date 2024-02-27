@@ -1,0 +1,3 @@
+[submodule "tracer_humble/overlay_ws/ugv_sdk"]
+	path = tracer_humble/overlay_ws/ugv_sdk
+	url = https://github.com/harry3doz/ugv_sdk.git
